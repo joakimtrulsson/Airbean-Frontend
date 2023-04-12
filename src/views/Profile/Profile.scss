@@ -1,0 +1,32 @@
+@use '../../scss/mixins';
+@use '../../scss/colors';
+
+.profile {
+  @include mixins.background(top, colors.$pink);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    @include mixins.circle(94px);
+    margin-bottom: 0.3rem;
+  }
+
+  &__title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__username {
+    margin-bottom: 1rem;
+  }
+
+  &__hide {
+    cursor: pointer;
+    text-decoration: underline;
+    text-align: center;
+  }
+}

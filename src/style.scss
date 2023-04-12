@@ -1,0 +1,144 @@
+@use './scss/typography.scss';
+@use './scss/colors.scss';
+@use './scss/mixins.scss';
+@use './scss/animations.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  min-width: 375px;
+  max-width: 375px;
+}
+
+.hidden {
+  display: none;
+}
+
+svg {
+  stroke-width: 2px;
+  max-width: 24px;
+  min-width: 24px;
+  max-height: 24px;
+  min-height: 24px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+}
+
+.overlay {
+  content: ' ';
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.5s;
+}
+
+button {
+  cursor: pointer;
+}
+
+.input__small,
+.input__large,
+.input__xlarge {
+  padding-left: 0.5rem;
+  background-color: colors.$pink;
+  border-radius: 5px;
+  border: solid 1px colors.$brown;
+  font-family: 'Work Sans';
+}
+
+.input__xlarge {
+  width: 310px;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+.input__large {
+  width: 230px;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+.input__small {
+  height: 40px;
+  width: 190px;
+  padding-left: 0.5rem;
+  background-color: colors.$pink;
+  border-radius: 5px;
+  border: solid 1px colors.$brown;
+  font-family: 'Work Sans';
+  margin-top: 1rem;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #f3e4e1 inset;
+}
+
+.text__area {
+  padding-top: 0.6rem;
+  resize: none;
+}
+
+li {
+  list-style: none;
+}
+
+.button__large,
+.button__small {
+  background-color: colors.$brown;
+  border-radius: 6px;
+  border: none;
+  color: colors.$white;
+  font-family: 'PT Serif';
+  transition: all 0.2s;
+}
+
+.button__large {
+  height: 40px;
+  width: 190px;
+  font-size: 18px;
+  margin-top: 1rem;
+}
+
+.button__small {
+  height: 25px;
+  width: 80px;
+  font-size: 16px;
+  // margin-bottom: 1rem;
+}
+
+.button__large:hover,
+.button__small:hover {
+  background-color: colors.$orange;
+}
+
+.button-warning {
+  background-color: colors.$orange;
+}
+
+.button-warning:hover {
+  background-color: colors.$brown;
+}

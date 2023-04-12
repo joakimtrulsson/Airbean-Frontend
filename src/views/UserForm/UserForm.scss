@@ -1,0 +1,17 @@
+@use '../../scss/mixins';
+@use '../../scss/colors';
+
+.userform {
+  @include mixins.background(top, colors.$pink);
+
+  &__container {
+    padding: 3rem;
+  }
+
+  &__link {
+    margin-top: 0.4rem;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
