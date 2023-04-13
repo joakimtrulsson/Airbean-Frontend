@@ -1,4 +1,4 @@
-# Airbean - The Drone Delivered Coffeeshop - React Web Application
+# Airbean - Drone Delivered Coffee - React Web Application
 Airbean is a web application for a fictional coffee shop that offers drone-delivered coffee. The application includes several features such as login, product ordering, reviews, and payment via Stripe. Additionally, there is a welcome email for new users and an administrator login that enables the admin to manage products and view order statistics.
 
 ##Technologies Used
