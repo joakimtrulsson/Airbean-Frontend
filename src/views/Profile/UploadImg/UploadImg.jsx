@@ -1,19 +1,17 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import FormData from 'form-data';
-import { useNavigate } from 'react-router-dom';
 
-import { setUserImgUrl } from '../../../actions/userAction';
+import { setUserImgUrl } from '../../../slices/userSlice';
 
 import { patchUserImg } from '../../../helpers/api';
 
 import './UploadImg.scss';
 
-export default function UploadImg({ getData, children }) {
+export default function UploadImg({ children }) {
   const [file, setFile] = useState();
   const formData = new FormData();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const handleFileChange = (e) => {
     if (e.target.files) {
@@ -27,10 +25,11 @@ export default function UploadImg({ getData, children }) {
       return;
     }
     formData.append('photo', file);
-    const data = await patchUserImg(formData);
 
+    const data = await patchUserImg(formData);
+    const newImg = data.data.user.photo;
     if (data.status === 'success') {
-      dispatch(setUserImgUrl(data.data.user.photo));
+      dispatch(setUserImgUrl({ imgUrl: newImg }));
     }
   };
 

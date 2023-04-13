@@ -4,22 +4,13 @@
 .admin {
   @include mixins.background(top, colors.$pink);
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .tools {
     &__container {
       @include mixins.center;
 
       flex-direction: column;
       align-items: center;
-    }
-
-    &__title {
-      margin-top: 3rem;
+      margin: 7rem 1.3rem 0 1.3rem;
     }
 
     &__hide {

@@ -7,15 +7,14 @@ export default function ForgetPasswordForm({ handler, toggleActiveComponentType 
 
   return (
     <AuthForm
-      title='Fyll i din epost för att få återställnings mail.'
+      title='Fyll i din epost för att få ett mail med en återställningslänk.'
       button='Alright!'
       fields={fields}
       handler={handler}
     >
       <p className='authforms__changeview'>
-        Jag kom på mitt lösenord! Klicka
         <span className='authforms__link' onClick={(e) => toggleActiveComponentType(e, SIGNIN)}>
-          här
+          Jag kom på mitt lösenord!
         </span>
       </p>
     </AuthForm>

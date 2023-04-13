@@ -2,35 +2,16 @@
 @use '../../scss/mixins';
 
 .status {
-    @include mixins.background(none, colors.$orange);
+  @include mixins.background(none, colors.$orange);
 
+  &__content {
+    margin: 7rem 1.3rem 0 1.3rem;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 
-    // Nedståend är mer eller mindre, samma som i CartList
-    // - bör nog flyttas till generell
-    &__button {
-        color: colors.$brown;
-        background: colors.$white;
-        border: none;
-
-        font-family: 'PT Serif';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-
-        padding: 0.7rem 2.2rem;
-        border-radius: 50px;
-
-        align-self: center;
-
-        transition: all 0.3s;
-
-        margin-top: 50px;
+    .button__large {
+      align-self: center;
     }
-
-    &__button:hover {
-        color: colors.$white;
-        background: colors.$brown;
-    }
+  }
 }

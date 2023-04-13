@@ -11,10 +11,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 7rem 1.3rem 0 1.3rem;
 
   &__profile {
     @include mixins.circle(94px);
-    margin-top: 4rem;
     margin-bottom: 1rem;
   }
 

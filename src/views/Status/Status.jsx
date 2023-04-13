@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 
 import { setLatestOrderId } from '../../slices/userSlice';
 
+import Header from '../../components/Header/Header';
+import Nav from '../../components/Nav/Nav';
 import OrderStatus from './OrderStatus/OrderStatus';
 import './Status.scss';
 
@@ -27,16 +29,21 @@ export default function Status() {
 
   return (
     <main className='container status'>
-      <OrderStatus sessionId={sessionId} />
+      <Header>
+        <Nav />
+      </Header>
+      <article className='status__content'>
+        <OrderStatus sessionId={sessionId} />
 
-      <button
-        className='status__button'
-        onClick={() => {
-          navigate('/orderhistory');
-        }}
-      >
-        Ok, cool!
-      </button>
+        <button
+          className='button__large'
+          onClick={() => {
+            navigate('/orderhistory');
+          }}
+        >
+          Ok, cool!
+        </button>
+      </article>
     </main>
   );
 }

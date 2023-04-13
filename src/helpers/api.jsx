@@ -1,5 +1,4 @@
-const apiUri = 'https://airbean.joakimtrulsson.se/api';
-// const apiUri = 'http://127.0.0.1:8000/api';
+const apiUri = 'http://127.0.0.1:8000/api';
 
 const createRequest = (method, body) => {
   return {
@@ -20,6 +19,7 @@ const callApi = async (endpoint, method, body, param) => {
 
   try {
     const response = await fetch(url, request);
+
     if (response.status === 204) {
       return { success: 'success' };
     }

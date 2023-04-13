@@ -26,7 +26,7 @@ export default function Profile() {
   const usersName = useSelector((state) => state.user.name);
   const imgUrl = useSelector((state) => state.user.imgUrl);
 
-  const BASE_URL = `https://www.airbean.joakimtrulsson.se/public/img/users`;
+  const BASE_URL = `http://127.0.0.1:8000/api/public/img/users`;
 
   useEffect(() => {
     {
