@@ -16,6 +16,7 @@ Airbean is a web application for a fictional coffee shop that offers drone-deliv
 - Create an account or log in with an existing account.
 - Browse and order coffee products.
 - Complete the payment process with Stripe.
+- For testing purposes, you can use the credit card number 4242 4242 4242 4242, which is a commonly used test number for processing successful payments.
 - Leave a review and rating for the products.
 
 API Documentation
