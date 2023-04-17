@@ -17,7 +17,6 @@ export default function ForgetPasswordForm({ handler, toggleActiveComponentType 
         onClick={(e) => toggleActiveComponentType(e, SIGNIN)}
       >
         Jag kom på mitt lösenord!
-        {/* <span className='' onClick={(e) => toggleActiveComponentType(e, SIGNIN)}></span> */}
       </p>
     </AuthForm>
   );
