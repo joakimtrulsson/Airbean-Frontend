@@ -1,3 +1,4 @@
+// const apiUri = 'https://airbean.joakimtrulsson.se/api';
 const apiUri = 'http://127.0.0.1:8000/api';
 
 const createRequest = (method, body) => {

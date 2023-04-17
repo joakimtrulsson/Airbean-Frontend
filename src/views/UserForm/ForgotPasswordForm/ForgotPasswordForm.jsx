@@ -12,10 +12,12 @@ export default function ForgetPasswordForm({ handler, toggleActiveComponentType 
       fields={fields}
       handler={handler}
     >
-      <p className='authforms__changeview'>
-        <span className='authforms__link' onClick={(e) => toggleActiveComponentType(e, SIGNIN)}>
-          Jag kom på mitt lösenord!
-        </span>
+      <p
+        className='authforms__changeview authforms__link'
+        onClick={(e) => toggleActiveComponentType(e, SIGNIN)}
+      >
+        Jag kom på mitt lösenord!
+        {/* <span className='' onClick={(e) => toggleActiveComponentType(e, SIGNIN)}></span> */}
       </p>
     </AuthForm>
   );

@@ -20,7 +20,7 @@ export default function OrderHistory() {
   const userName = useSelector((state) => state.user.userName);
   const imgUrl = useSelector((state) => state.user.imgUrl);
 
-  const userImg = `http://127.0.0.1:8000/api/public/img/users/${imgUrl}`;
+  const userImg = `https://www.airbean.joakimtrulsson.se/public/img/users/${imgUrl}`;
 
   useEffect(() => {
     {
